@@ -16,13 +16,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cjS-b0-koJ">
+                                <rect key="frame" x="0.0" y="-50" width="393" height="902"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cjS-b0-koJ" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="2Qu-iv-yZw"/>
+                            <constraint firstItem="cjS-b0-koJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="ASK-RJ-A7g"/>
+                            <constraint firstItem="cjS-b0-koJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-50" id="FFH-Ec-IrA"/>
+                            <constraint firstItem="cjS-b0-koJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rfj-V3-Zrw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="cjS-b0-koJ" id="aSH-qr-jyC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="4"/>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
