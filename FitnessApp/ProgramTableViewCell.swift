@@ -39,11 +39,11 @@ class ProgramTableViewCell: UITableViewCell {
         selectionStyle     = .none
     }
     
-    func configure(title: String, duration: Int, calories: Int, image: UIImage) {
-        titleLabel      .text  = title
-        durationLabel   .text  = "\(duration) mins"
-        caloriesLabel   .text  = "\(calories) cal"
-        programImageview.image = image
+    func configure(withProgram program: Program) {
+        titleLabel      .text  = program.title
+        durationLabel   .text  = "\(program.duration) mins"
+        caloriesLabel   .text  = "\(program.calories) cal"
+        programImageview.image = UIImage(named: program.image)!
     }
     
     override func layoutSubviews() {
