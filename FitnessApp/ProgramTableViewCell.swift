@@ -15,14 +15,15 @@ class ProgramTableViewCell: UITableViewCell {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var programImageview: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let gradientLayer = CAGradientLayer()
+        let gradientLayer  = CAGradientLayer()
         
-        let colorTop    = UIColor.primary  .cgColor
-        let colorBottom = UIColor.secondary.cgColor
+        let colorTop       = UIColor.primary  .cgColor
+        let colorBottom    = UIColor.secondary.cgColor
         
         gradientLayer.colors        = [colorTop, colorBottom]
         gradientLayer.locations     = [0.0, 1.0]
@@ -36,6 +37,13 @@ class ProgramTableViewCell: UITableViewCell {
         caloriesLabel.font = UIFont.style(.caption)
         
         selectionStyle     = .none
+    }
+    
+    func configure(title: String, duration: Int, calories: Int, image: UIImage) {
+        titleLabel      .text  = title
+        durationLabel   .text  = "\(duration) mins"
+        caloriesLabel   .text  = "\(calories) cal"
+        programImageview.image = image
     }
     
     override func layoutSubviews() {
