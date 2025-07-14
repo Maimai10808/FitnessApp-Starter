@@ -33,13 +33,13 @@ extension UIFont {
 
 enum FontType: String {
     
-    case rubikBlack = "Rubik-Black"
-    case rubikBlackItalic = "Rubik-BlackItalic"
-    case rubikBold = "Rubik-Bold"
-    case rubikMedium = "Rubik-Medium"
+    case rubikBlack        = "Rubik-Black"
+    case rubikBlackItalic  = "Rubik-BlackItalic"
+    case rubikBold         = "Rubik-Bold"
+    case rubikMedium       = "Rubik-Medium"
     case rubikMediumItalic = "Rubik-MediumItalic"
-    case rubikRegular = "Rubik-Regular"
-    case rubikSemiBold = "Rubik-SemiBold"
+    case rubikRegular      = "Rubik-Regular"
+    case rubikSemiBold     = "Rubik-SemiBold"
 }
 
 extension FontType {
@@ -105,26 +105,27 @@ extension FontStyle {
     private var fontDescription: FontDescription {
         switch self {
         case .h1:
-            return FontDescription(font: .rubikBold, size: .theme(.h1), style: .title1)
+            return FontDescription(font: .rubikBold,     size: .theme(.h1),            style: .title1)
         case .h2:
-            return FontDescription(font: .rubikMedium, size: .theme(.h2), style: .title2)
+            return FontDescription(font: .rubikMedium,   size: .theme(.h2),            style: .title2)
         case .body:
-            return FontDescription(font: .rubikRegular, size: .theme(.body), style: .body)
+            return FontDescription(font: .rubikRegular,  size: .theme(.body),          style: .body)
         case .secondaryText:
-            return FontDescription(font: .rubikRegular, size: .theme(.secondaryText), style: .body)
+            return FontDescription(font: .rubikRegular,  size: .theme(.secondaryText), style: .body)
         case .caption:
-            return FontDescription(font: .rubikRegular, size: .theme(.caption), style: .caption1)
+            return FontDescription(font: .rubikRegular,  size: .theme(.caption),       style: .caption1)
         case .category:
-            return FontDescription(font: .rubikBold, size: .theme(.category), style: .body)
+            return FontDescription(font: .rubikBold,     size: .theme(.category),      style: .body)
         case .formLabel:
-            return FontDescription(font: .rubikSemiBold, size: .theme(.formLabel), style: .caption1)
+            return FontDescription(font: .rubikSemiBold, size: .theme(.formLabel),     style: .caption1)
         case .buttonTitle:
-            return FontDescription(font: .rubikBold, size: .theme(.buttonTitle), style: .body)
+            return FontDescription(font: .rubikBold,     size: .theme(.buttonTitle),   style: .body)
         }
     }
     
     var font: UIFont {
-        guard let font = UIFont(name: fontDescription.font.name, size: fontDescription.size.value) else {
+        guard let font = UIFont(name: fontDescription.font.name,
+                                size: fontDescription.size.value) else {
             return UIFont.preferredFont(forTextStyle: fontDescription.style)
         }
         let fontMetrics = UIFontMetrics(forTextStyle: fontDescription.style)
