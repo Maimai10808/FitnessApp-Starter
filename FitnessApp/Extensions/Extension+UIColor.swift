@@ -20,11 +20,11 @@ import UIKit
 extension UIColor {
     
     static var primary: UIColor {
-        return UIColor(named: "Primary")!
+        return UIColor(named: "primary")!
     }
     
     static var secondary: UIColor {
-        return UIColor(named: "Secondary")!
+        return UIColor(named: "secondary")!
     }
     
 }
