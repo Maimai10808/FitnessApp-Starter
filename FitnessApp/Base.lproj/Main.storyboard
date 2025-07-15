@@ -33,11 +33,27 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="cjS-b0-koJ" id="aSH-qr-jyC"/>
+                        <segue destination="R05-wH-Gs1" kind="presentation" identifier="WorkoutSegue" id="Wo0-Wc-8rc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+        <!--Workout View Controller-->
+        <scene sceneID="z5w-eF-0yY">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="R05-wH-Gs1" customClass="WorkoutViewController" customModule="FitnessApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Liv-82-QTU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Pk0-jW-0Ae"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUO-ZE-hlu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1231" y="4"/>
         </scene>
     </scenes>
     <resources>
