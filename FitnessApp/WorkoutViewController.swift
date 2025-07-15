@@ -15,6 +15,7 @@ class WorkoutViewController: UIViewController {
     var animationView: LottieAnimationView!
     
     var program: Program!
+    var currentExerciseIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,18 @@ class WorkoutViewController: UIViewController {
         
         ringView.progress = 0.0
         
-        animationView   = LottieAnimationView(name: "jumpingjack")
+        
+    }
+    
+    func loadExercise() {
+        
+        ringView.progress = 0.0
+        
+        let exercise = program.excercises[currentExerciseIndex]
+        
+        ringView.startAnimation(time: exercise.duration)
+        
+        animationView             = LottieAnimationView(name: exercise.animation)
         animationView.translatesAutoresizingMaskIntoConstraints = false
         animationView.loopMode    = .loop
         animationView.contentMode = .scaleAspectFit
@@ -32,18 +44,17 @@ class WorkoutViewController: UIViewController {
         view.addSubview(animationView)
         
         // ➤ 添加居中与固定大小约束
-            NSLayoutConstraint.activate([
-                animationView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                animationView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-                animationView.widthAnchor  .constraint(equalToConstant: 150),
-                animationView.heightAnchor .constraint(equalToConstant: 150)
+       NSLayoutConstraint.activate([
+           animationView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+           animationView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+           animationView.widthAnchor  .constraint(equalToConstant: 150),
+           animationView.heightAnchor .constraint(equalToConstant: 150)
             ])
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        ringView.progress = 0.0
-        ringView.startAnimation(time: 10)
+        loadExercise()
     }
     
 }
@@ -51,6 +62,14 @@ class WorkoutViewController: UIViewController {
 
 extension WorkoutViewController: RingViewDelegate {
     func animationDidEnd() {
-        print("animation ended. workoutvc is informed")
+        
+        if program.excercises.count - 1 == currentExerciseIndex {
+            animationView.stop()
+            return
+        } else {
+            currentExerciseIndex += 1
+            loadExercise()
+        }
+        
     }
 }
