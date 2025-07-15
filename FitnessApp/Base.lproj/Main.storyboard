@@ -66,7 +66,7 @@
                     </view>
                     <connections>
                         <outlet property="ringView" destination="jnb-6v-vDq" id="c9B-q5-oos"/>
-                        <segue destination="xnI-mn-IDQ" kind="presentation" identifier="WorkoutSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="h3b-Rm-aR1"/>
+                        <segue destination="xnI-mn-IDQ" kind="presentation" identifier="WorkoutResultsSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="h3b-Rm-aR1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUO-ZE-hlu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -82,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8j-n1-R8D">
-                                <rect key="frame" x="25" y="291" width="343" height="270"/>
+                                <rect key="frame" x="25" y="276" width="343" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM1-U4-Wzg">
                                         <rect key="frame" x="115" y="165" width="113" height="21"/>
@@ -112,7 +112,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="270" id="0FV-a4-Ytv"/>
+                                    <constraint firstAttribute="height" constant="300" id="0FV-a4-Ytv"/>
                                     <constraint firstItem="QM1-U4-Wzg" firstAttribute="centerX" secondItem="M8j-n1-R8D" secondAttribute="centerX" id="7BW-wk-Dcm"/>
                                     <constraint firstItem="NYQ-bg-2KE" firstAttribute="centerX" secondItem="M8j-n1-R8D" secondAttribute="centerX" id="K79-VW-CSE"/>
                                     <constraint firstItem="v9k-58-qgg" firstAttribute="centerX" secondItem="M8j-n1-R8D" secondAttribute="centerX" id="S8q-Qr-moA"/>
