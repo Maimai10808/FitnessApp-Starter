@@ -111,10 +111,34 @@ class RingView: UIView {
         animation.toValue               = 1
         animation.timingFunction        = CAMediaTimingFunction(name: .linear)
         
+        animation.delegate = self // ⬅️ 关键：没有这句 delegate 就无法触发
+        
         ringLayer.add(animation, forKey: nil)
     }
 
 }
+
+/*
+ WorkoutViewController
+     ↓ 设为 RingView 的代理
+ RingView.delegate = self
+
+ RingView
+     ↓ 播放动画，并设置自身为动画的 delegate
+ animation.delegate = self
+
+ CABasicAnimation
+     ↓ 动画结束时，系统回调
+ animationDidStop(…) 被触发
+
+ RingView
+     ↓ 通知控制器
+ delegate?.animationDidEnd()
+
+ WorkoutViewController
+     ↓ 响应动画结束
+ animationDidEnd() → loadExercise()
+ */
 
 extension RingView: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
