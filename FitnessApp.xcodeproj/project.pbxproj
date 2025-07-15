@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04404AC82E25702F002A1163 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04404AC62E25702F002A1163 /* ProgramTableViewCell.swift */; };
+		04404AC92E25702F002A1163 /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04404AC72E25702F002A1163 /* ProgramTableViewCell.xib */; };
+		04404AD02E2630E9002A1163 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04404ACF2E2630E9002A1163 /* WorkoutViewController.swift */; };
+		04404AD32E26628A002A1163 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 04404AD22E26628A002A1163 /* Lottie */; };
+		04404ADB2E2670DD002A1163 /* WorkoutResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04404ADA2E2670DD002A1163 /* WorkoutResultsViewController.swift */; };
+		04404ADD2E2682DD002A1163 /* learing.md in Resources */ = {isa = PBXBuildFile; fileRef = 04404ADC2E2682DD002A1163 /* learing.md */; };
 		E1A30AE829F65A5C000486C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A30AE729F65A5C000486C6 /* AppDelegate.swift */; };
 		E1A30AEA29F65A5C000486C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A30AE929F65A5C000486C6 /* SceneDelegate.swift */; };
 		E1A30AEC29F65A5C000486C6 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A30AEB29F65A5C000486C6 /* DashboardViewController.swift */; };
@@ -32,6 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04404AC62E25702F002A1163 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
+		04404AC72E25702F002A1163 /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
+		04404ACF2E2630E9002A1163 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		04404ADA2E2670DD002A1163 /* WorkoutResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutResultsViewController.swift; sourceTree = "<group>"; };
+		04404ADC2E2682DD002A1163 /* learing.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = learing.md; sourceTree = "<group>"; };
 		E1A30AE429F65A5C000486C6 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A30AE729F65A5C000486C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A30AE929F65A5C000486C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,11 +69,16 @@
 		E1A30B9D29F887C4000486C6 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		04404ACA2E258C6C002A1163 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		E1A30AE129F65A5C000486C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04404AD32E26628A002A1163 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +104,7 @@
 		E1A30AE629F65A5C000486C6 /* FitnessApp */ = {
 			isa = PBXGroup;
 			children = (
+				04404ACA2E258C6C002A1163 /* Models */,
 				E1A30B9C29F8851C000486C6 /* Extensions */,
 				E1A30B2E29F749C0000486C6 /* Components */,
 				E1A30AFC29F6951A000486C6 /* Resources */,
@@ -100,6 +117,11 @@
 				E1A30B3329F74A9A000486C6 /* Colors.xcassets */,
 				E1A30AF229F65A64000486C6 /* LaunchScreen.storyboard */,
 				E1A30AF529F65A64000486C6 /* Info.plist */,
+				04404AC62E25702F002A1163 /* ProgramTableViewCell.swift */,
+				04404AC72E25702F002A1163 /* ProgramTableViewCell.xib */,
+				04404ACF2E2630E9002A1163 /* WorkoutViewController.swift */,
+				04404ADA2E2670DD002A1163 /* WorkoutResultsViewController.swift */,
+				04404ADC2E2682DD002A1163 /* learing.md */,
 			);
 			path = FitnessApp;
 			sourceTree = "<group>";
@@ -178,6 +200,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				04404ACA2E258C6C002A1163 /* Models */,
+			);
 			name = FitnessApp;
 			productName = FitnessApp;
 			productReference = E1A30AE429F65A5C000486C6 /* FitnessApp.app */;
@@ -207,6 +232,9 @@
 				Base,
 			);
 			mainGroup = E1A30ADB29F65A5C000486C6;
+			packageReferences = (
+				04404AD12E26628A002A1163 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = E1A30AE529F65A5C000486C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -221,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04404AC92E25702F002A1163 /* ProgramTableViewCell.xib in Resources */,
 				E1A30AF429F65A64000486C6 /* LaunchScreen.storyboard in Resources */,
 				E1A30B0329F69544000486C6 /* Rubik-Bold.ttf in Resources */,
 				E1A30B3429F74A9A000486C6 /* Colors.xcassets in Resources */,
@@ -231,6 +260,7 @@
 				E1A30B0929F69562000486C6 /* Rubik-Regular.ttf in Resources */,
 				E1A30B0629F69559000486C6 /* Rubik-MediumItalic.ttf in Resources */,
 				E1A30B0129F69537000486C6 /* Rubik-Black.ttf in Resources */,
+				04404ADD2E2682DD002A1163 /* learing.md in Resources */,
 				E1A30B9729F8843A000486C6 /* jumpingjack.json in Resources */,
 				E1A30B0B29F69721000486C6 /* Rubik-SemiBold.ttf in Resources */,
 				E1A30AEF29F65A5C000486C6 /* Main.storyboard in Resources */,
@@ -245,8 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04404AD02E2630E9002A1163 /* WorkoutViewController.swift in Sources */,
 				E1A30AEC29F65A5C000486C6 /* DashboardViewController.swift in Sources */,
 				E1A30B3029F749D4000486C6 /* ShadowButton.swift in Sources */,
+				04404ADB2E2670DD002A1163 /* WorkoutResultsViewController.swift in Sources */,
+				04404AC82E25702F002A1163 /* ProgramTableViewCell.swift in Sources */,
 				E1A30AE829F65A5C000486C6 /* AppDelegate.swift in Sources */,
 				E1A30B0D29F69870000486C6 /* Typography.swift in Sources */,
 				E1A30B9B29F88516000486C6 /* RingView.swift in Sources */,
@@ -476,6 +509,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04404AD12E26628A002A1163 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04404AD22E26628A002A1163 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04404AD12E26628A002A1163 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1A30ADC29F65A5C000486C6 /* Project object */;
 }
