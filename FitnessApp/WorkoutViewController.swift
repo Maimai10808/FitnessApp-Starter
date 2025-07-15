@@ -64,12 +64,17 @@ extension WorkoutViewController: RingViewDelegate {
     func animationDidEnd() {
         
         if program.excercises.count - 1 == currentExerciseIndex {
+            
             animationView.stop()
+            
+            performSegue(withIdentifier: "WorkoutSegue", sender: nil)
             return
         } else {
+            
             currentExerciseIndex += 1
             loadExercise()
+            
         }
-        
     }
+    
 }
