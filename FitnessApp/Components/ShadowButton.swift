@@ -26,6 +26,7 @@ class ShadowButton: UIButton {
     }
     
     private func setupView() {
+        titleLabel?.textColor = UIColor.white
         titleLabel?.font    = UIFont.style(.buttonTitle)
         backgroundColor     = UIColor.primary
         layer.shadowColor   = UIColor.secondary.cgColor
