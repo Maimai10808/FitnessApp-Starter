@@ -47,9 +47,26 @@
                     <view key="view" contentMode="scaleToFill" id="Liv-82-QTU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnb-6v-vDq" customClass="RingView" customModule="FitnessApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="249.66666666666663" width="353" height="353"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jnb-6v-vDq" secondAttribute="height" multiplier="1:1" id="WMx-G1-0VN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Pk0-jW-0Ae"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jnb-6v-vDq" firstAttribute="leading" secondItem="Pk0-jW-0Ae" secondAttribute="leading" constant="20" id="4PD-rn-L5l"/>
+                            <constraint firstItem="jnb-6v-vDq" firstAttribute="centerY" secondItem="Liv-82-QTU" secondAttribute="centerY" id="COK-dG-29f"/>
+                            <constraint firstItem="Pk0-jW-0Ae" firstAttribute="trailing" secondItem="jnb-6v-vDq" secondAttribute="trailing" constant="20" id="MbG-ge-go1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ringView" destination="jnb-6v-vDq" id="c9B-q5-oos"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUO-ZE-hlu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
