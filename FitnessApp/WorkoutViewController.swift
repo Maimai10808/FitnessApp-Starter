@@ -8,6 +8,11 @@
 import UIKit
 import Lottie
 
+protocol WorkoutDelegate: AnyObject {
+    func dismissWorkout()
+}
+
+
 class WorkoutViewController: UIViewController {
     
     @IBOutlet weak var ringView: RingView!
@@ -16,6 +21,13 @@ class WorkoutViewController: UIViewController {
     
     var program: Program!
     var currentExerciseIndex = 0
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "WorkoutResultsSegue" {
+            let destinationVC = segue.destination as! WorkoutResultsViewController
+            destinationVC.workoutDelegate = self
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +69,7 @@ class WorkoutViewController: UIViewController {
         loadExercise()
     }
     
+    
 }
 
 
@@ -67,7 +80,7 @@ extension WorkoutViewController: RingViewDelegate {
             
             animationView.stop()
             
-            performSegue(withIdentifier: "WorkoutSegue", sender: nil)
+            performSegue(withIdentifier: "WorkoutResultsSegue", sender: nil)
             return
         } else {
             
@@ -75,6 +88,14 @@ extension WorkoutViewController: RingViewDelegate {
             loadExercise()
             
         }
+    }
+    
+}
+
+extension WorkoutViewController: WorkoutDelegate {
+    
+    func dismissWorkout() {
+        dismiss(animated: true)
     }
     
 }

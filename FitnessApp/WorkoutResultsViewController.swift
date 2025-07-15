@@ -8,6 +8,8 @@
 import UIKit
 import Lottie
 
+
+
 class WorkoutResultsViewController: UIViewController {
 
     @IBOutlet weak var resultsView        : UIView!
@@ -15,6 +17,7 @@ class WorkoutResultsViewController: UIViewController {
     @IBOutlet weak var trophyContainerView: UIView!
     @IBOutlet weak var submitButton       : ShadowButton!
     
+    weak var workoutDelegate: WorkoutDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +66,9 @@ class WorkoutResultsViewController: UIViewController {
     
     
     @IBAction func submitButtonTapped(_ sender: Any) {
+        dismiss(animated: true) {
+            self.workoutDelegate?.dismissWorkout()
+        }
     }
     
 
